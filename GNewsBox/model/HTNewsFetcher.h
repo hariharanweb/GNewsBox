@@ -7,9 +7,10 @@
 #import "HTNewsReadyProtocol.h"
 #import "HTNews.h"
 
-@interface HTGoogleNews : NSObject
+@interface HTNewsFetcher : NSObject
 - (id)initWithListener:(id<HTNewsReadyProtocol>) delegate;
-- (void) fetchNews;
+
+- (void)fetchNews:(NSString *)url;
 - (int) numberOfItems;
 - (HTNews*) newsAtIndex:(int) index;
 @end

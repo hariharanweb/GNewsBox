@@ -29,13 +29,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uuy-rE-VDI">
                             <size key="itemSize" width="192" height="244"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="T7y-Z4-Kee" customClass="HTNewscell">
-                                <rect key="frame" x="0.0" y="64" width="192" height="244"/>
+                                <rect key="frame" x="0.0" y="114" width="192" height="244"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="192" height="244"/>
@@ -58,6 +58,29 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerView" id="hjk-Mk-EUG" customClass="HTHeaderView">
+                            <rect key="frame" x="0.0" y="64" width="768" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rfd-6Y-yA1">
+                                    <rect key="frame" x="27" y="11" width="501" height="29"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="News"/>
+                                        <segment title="Technology"/>
+                                        <segment title="Tamil"/>
+                                        <segment title=""/>
+                                        <segment title=""/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="headerClicked:" destination="hjk-Mk-EUG" eventType="valueChanged" id="p1w-7V-Ud0"/>
+                                    </connections>
+                                </segmentedControl>
+                            </subviews>
+                            <connections>
+                                <outlet property="headers" destination="rfd-6Y-yA1" id="iJo-af-pJI"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="nbS-b8-6Xa" id="5Le-P4-rsx"/>
                             <outlet property="delegate" destination="nbS-b8-6Xa" id="f0C-Kv-wb8"/>
@@ -80,6 +103,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="delegate" destination="Knn-id-E49" id="sAF-kb-PKQ"/>
+                        </connections>
                     </webView>
                     <navigationItem key="navigationItem" id="t8P-P9-9Un"/>
                     <connections>

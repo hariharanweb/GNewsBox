@@ -3,19 +3,19 @@
 // Copyright (c) 2014 harihat. All rights reserved.
 //
 
-#import "HTGoogleNews.h"
+#import "HTNewsFetcher.h"
 #import "HTNews.h"
 #import "HTNewsReadyProtocol.h"
 #import "RSSParser.h"
 #import <ObjectiveSugar.h>
 
-@interface HTGoogleNews()
+@interface HTNewsFetcher ()
 @property NSMutableArray *news;
 @property id<HTNewsReadyProtocol> delegate;
 @end
 
 
-@implementation HTGoogleNews
+@implementation HTNewsFetcher
 
 - (id)initWithListener:(id<HTNewsReadyProtocol>) delegate {
     self = [super init];
@@ -26,8 +26,8 @@
     return self;
 }
 
-- (void) fetchNews {
-    NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://news.google.com/news/feeds?pz=1&cf=all&ned=in&hl=en&output=rss"]];
+- (void)fetchNews:(NSString *)url {
+    NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
 
 
     [RSSParser parseRSSFeedForRequest:req success:^(NSArray *feedItems) {

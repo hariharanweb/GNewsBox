@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HTNews.h"
 
-@interface HTNewsLinkViewController : UIViewController
+@interface HTNewsLinkViewController : UIViewController<UIWebViewDelegate>
 
 @property(nonatomic, strong) HTNews *news;
 @end

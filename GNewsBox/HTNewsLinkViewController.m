@@ -27,11 +27,20 @@
 {
     [super viewDidLoad];
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.news.link]];
+    [self.webView setScalesPageToFit:YES];
+    [self.webView setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
 }
 
 
