@@ -25,6 +25,7 @@
 		F35856EC18D5FB1C00F545F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35856CE18D5FB1C00F545F0 /* UIKit.framework */; };
 		F35856F418D5FB1D00F545F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F35856F218D5FB1C00F545F0 /* InfoPlist.strings */; };
 		F35856F618D5FB1D00F545F0 /* GNewsBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F35856F518D5FB1D00F545F0 /* GNewsBoxTests.m */; };
+		F358570118D6113000F545F0 /* HTNewsLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F358570018D6113000F545F0 /* HTNewsLinkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		F35856F118D5FB1C00F545F0 /* GNewsBoxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GNewsBoxTests-Info.plist"; sourceTree = "<group>"; };
 		F35856F318D5FB1C00F545F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F35856F518D5FB1D00F545F0 /* GNewsBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNewsBoxTests.m; sourceTree = "<group>"; };
+		F35856FF18D6113000F545F0 /* HTNewsLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNewsLinkViewController.h; sourceTree = "<group>"; };
+		F358570018D6113000F545F0 /* HTNewsLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNewsLinkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 				2985E012572FFE81D50C011F /* HTNewscell.h */,
 				2985ECCF5DA22A364F8EBEBA /* model */,
 				2985E4B81756A2723E5DFEAB /* HTNewsReadyProtocol.h */,
+				F35856FF18D6113000F545F0 /* HTNewsLinkViewController.h */,
+				F358570018D6113000F545F0 /* HTNewsLinkViewController.m */,
 			);
 			path = GNewsBox;
 			sourceTree = "<group>";
@@ -249,8 +254,6 @@
 			mainGroup = F35856BE18D5FB1C00F545F0;
 			productRefGroup = F35856C818D5FB1C00F545F0 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				F35856C618D5FB1C00F545F0 /* GNewsBox */,
@@ -322,6 +325,7 @@
 				F35856DB18D5FB1C00F545F0 /* HTAppDelegate.m in Sources */,
 				F35856D718D5FB1C00F545F0 /* main.m in Sources */,
 				2985ED6EC7DC0055DAD1B0B0 /* HTNewscell.m in Sources */,
+				F358570118D6113000F545F0 /* HTNewsLinkViewController.m in Sources */,
 				2985E6A27D1AF46C5C47AB1D /* HTGoogleNews.m in Sources */,
 				2985E76F6D51C1FF9F4E8085 /* HTNews.m in Sources */,
 			);
@@ -532,6 +536,7 @@
 				F35856FB18D5FB1D00F545F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F35856FC18D5FB1D00F545F0 /* Build configuration list for PBXNativeTarget "GNewsBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +545,7 @@
 				F35856FE18D5FB1D00F545F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

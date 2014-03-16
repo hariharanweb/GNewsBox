@@ -7,5 +7,5 @@
 #import "HTNews.h"
 
 @interface HTNewscell : UICollectionViewCell
-@property HTNews *news;
+@property (nonatomic) HTNews *news;
 @end

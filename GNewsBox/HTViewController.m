@@ -9,6 +9,7 @@
 #import "HTViewController.h"
 #import "HTNewscell.h"
 #import "HTGoogleNews.h"
+#import "HTNewsLinkViewController.h"
 
 @interface HTViewController ()
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -43,6 +44,12 @@
 
 - (void)notifyNewsReady {
     [self.collectionView reloadData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    HTNewsLinkViewController * linkController = [segue destinationViewController];
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
+    linkController.news = [self.googleNews newsAtIndex:indexPath.row];
 }
 
 

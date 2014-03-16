@@ -8,7 +8,8 @@
 
 @interface HTNews : NSObject
 
-@property NSString *headline;
+@property(nonatomic, strong) NSString *headline;
+@property(nonatomic, strong) NSURL *link;
 
 - (instancetype)initWithFeed:(id)feedItem;
 

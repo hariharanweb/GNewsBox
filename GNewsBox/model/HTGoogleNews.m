@@ -27,7 +27,7 @@
 }
 
 - (void) fetchNews {
-    NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://news.google.com/?output=rss"]];
+    NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://news.google.com/news/feeds?pz=1&cf=all&ned=in&hl=en&output=rss"]];
 
 
     [RSSParser parseRSSFeedForRequest:req success:^(NSArray *feedItems) {

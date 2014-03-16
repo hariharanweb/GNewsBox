@@ -3,6 +3,7 @@
 // Copyright (c) 2014 harihat. All rights reserved.
 //
 
+#import <BlockRSSParser/RSSItem.h>
 #import "HTNews.h"
 
 
@@ -12,6 +13,7 @@
     self = [super init];
     if(self){
         self.headline = [feedItem title];
+        self.link = [feedItem link];
     }
     return self;
 }
