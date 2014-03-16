@@ -8,11 +8,13 @@
 
 @implementation HTNews
 
-- (id)initWithHeadline:(NSString *)headline {
+- (id)initWithFeed:(id)feedItem {
     self = [super init];
-    if (self) {
-        self.headline = headline;
+    if(self){
+        self.headline = [feedItem title];
     }
     return self;
 }
+
+
 @end

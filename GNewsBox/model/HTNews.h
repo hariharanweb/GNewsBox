@@ -10,6 +10,6 @@
 
 @property NSString *headline;
 
-- (instancetype)initWithHeadline:(NSString *)headline;
+- (instancetype)initWithFeed:(id)feedItem;
 
 @end

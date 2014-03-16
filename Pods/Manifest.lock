@@ -20,13 +20,16 @@ PODS:
     - AFNetworking/NSURLSession
   - BlockRSSParser (2.1):
     - AFNetworking (~> 2.0)
+  - ObjectiveSugar (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.2)
   - BlockRSSParser (~> 2.1)
+  - ObjectiveSugar (~> 1.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 0121f4b69be3fa58d1ab317866e036e12ac9651d
   BlockRSSParser: 50f06935d93e6490b7e1c365de49edf5d95346a9
+  ObjectiveSugar: fed588577bcf9733546aeaa089de444e4bab9a52
 
 COCOAPODS: 0.29.0

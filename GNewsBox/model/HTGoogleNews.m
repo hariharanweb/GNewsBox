@@ -6,6 +6,8 @@
 #import "HTGoogleNews.h"
 #import "HTNews.h"
 #import "HTNewsReadyProtocol.h"
+#import "RSSParser.h"
+#import <ObjectiveSugar.h>
 
 @interface HTGoogleNews()
 @property NSMutableArray *news;
@@ -25,23 +27,21 @@
 }
 
 - (void) fetchNews {
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline1"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline2"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline3"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline4"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline1"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline2"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline3"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline4"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline1"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline2"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline3"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline4"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline1"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline2"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline3"]];
-    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline4"]];
-    [self.delegate notifyNewsReady];
+    NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://news.google.com/?output=rss"]];
+
+
+    [RSSParser parseRSSFeedForRequest:req success:^(NSArray *feedItems) {
+        [feedItems each:^(id feedItem) {
+           HTNews *newsItem = [[HTNews alloc] initWithFeed:feedItem];
+           [self.news addObject:newsItem];
+        }];
+        [self.delegate notifyNewsReady];
+    } failure:^(NSError *error) {
+
+        NSLog(@"%@ Errrr", error);
+
+    }];
+
 }
 
 - (int)numberOfItems {
