@@ -4,24 +4,52 @@
 //
 
 #import "HTGoogleNews.h"
+#import "HTNews.h"
+#import "HTNewsReadyProtocol.h"
 
 @interface HTGoogleNews()
 @property NSMutableArray *news;
+@property id<HTNewsReadyProtocol> delegate;
 @end
 
 
 @implementation HTGoogleNews
 
-- (id)init {
+- (id)initWithListener:(id<HTNewsReadyProtocol>) delegate {
     self = [super init];
     if (self) {
-        _news  = [[NSMutableArray alloc] init];
+        self.news  = [[NSMutableArray alloc] init];
+        self.delegate = delegate;
     }
     return self;
 }
 
 - (void) fetchNews {
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline1"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline2"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline3"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline4"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline1"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline2"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline3"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline4"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline1"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline2"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline3"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline4"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline1"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline2"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline3"]];
+    [_news addObject:[[HTNews alloc] initWithHeadline:@"Headline4"]];
+    [self.delegate notifyNewsReady];
+}
 
+- (int)numberOfItems {
+    return self.news.count;
+}
+
+- (HTNews *)newsAtIndex:(int)index {
+    return self.news[index];
 }
 
 @end

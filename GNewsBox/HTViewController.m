@@ -7,9 +7,12 @@
 //
 
 #import "HTViewController.h"
+#import "HTNewscell.h"
+#import "HTGoogleNews.h"
 
 @interface HTViewController ()
-
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property HTGoogleNews *googleNews;
 @end
 
 @implementation HTViewController
@@ -17,6 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.googleNews = [[HTGoogleNews alloc] initWithListener:self];
+    [self.googleNews fetchNews];
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,15 +30,20 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return [self.googleNews numberOfItems];
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellName = @"NewsCell";
-    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier: cellName forIndexPath:indexPath];
-
+    HTNewscell * cell = [collectionView dequeueReusableCellWithReuseIdentifier: cellName forIndexPath:indexPath];
+    cell.news = [self.googleNews newsAtIndex:indexPath.row];
     return cell;
 }
+
+- (void)notifyNewsReady {
+    [self.collectionView reloadData];
+}
+
 
 @end

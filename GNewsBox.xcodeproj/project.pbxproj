@@ -42,6 +42,7 @@
 		2985E0334F83A298B441964E /* HTNewscell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNewscell.m; sourceTree = "<group>"; };
 		2985E3BDBB1E98E5530C1A9B /* HTNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNews.m; sourceTree = "<group>"; };
 		2985E4007E6703BDE854C903 /* HTGoogleNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTGoogleNews.m; sourceTree = "<group>"; };
+		2985E4B81756A2723E5DFEAB /* HTNewsReadyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNewsReadyProtocol.h; sourceTree = "<group>"; };
 		2985EA51ECBA5D77DA57F369 /* HTGoogleNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTGoogleNews.h; sourceTree = "<group>"; };
 		2985EC7EAC2FC4B027F93A44 /* HTNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNews.h; sourceTree = "<group>"; };
 		2BBF92E0D9CB443083509859 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 				2985E0334F83A298B441964E /* HTNewscell.m */,
 				2985E012572FFE81D50C011F /* HTNewscell.h */,
 				2985ECCF5DA22A364F8EBEBA /* model */,
+				2985E4B81756A2723E5DFEAB /* HTNewsReadyProtocol.h */,
 			);
 			path = GNewsBox;
 			sourceTree = "<group>";

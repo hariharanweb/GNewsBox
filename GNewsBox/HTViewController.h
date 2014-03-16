@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HTNewsReadyProtocol.h"
 
-@interface HTViewController : UICollectionViewController
+@interface HTViewController : UICollectionViewController<HTNewsReadyProtocol>
 
 @end

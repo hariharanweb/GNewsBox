@@ -4,8 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HTNews.h"
 
-@interface HTNewscell : UICollectionViewCell
-@property HTNews *news;
+@protocol HTNewsReadyProtocol <NSObject>
+- (void) notifyNewsReady;
 @end

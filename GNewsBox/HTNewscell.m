@@ -11,4 +11,8 @@
 
 @implementation HTNewscell
 
+- (void)setNews:(HTNews *)news {
+    self.headline.text = news.headline;
+}
+
 @end
