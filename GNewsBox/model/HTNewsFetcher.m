@@ -16,13 +16,14 @@
 
 
 @implementation HTNewsFetcher
-HTNewsFetcher *fetcher;
+
 
 + (HTNewsFetcher *)instance {
+    static HTNewsFetcher *fetcher;
     if(fetcher)
         return fetcher;
 
-    HTNewsFetcher *fetcher = [[HTNewsFetcher alloc] init];
+    fetcher = [[HTNewsFetcher alloc] init];
     return fetcher;
 }
 
@@ -39,7 +40,6 @@ HTNewsFetcher *fetcher;
     return self;
 }
 
-
 - (void)fetchNews {
     NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:self.newsURL]];
     [RSSParser parseRSSFeedForRequest:req success:^(NSArray *feedItems) {
@@ -53,6 +53,11 @@ HTNewsFetcher *fetcher;
 
     }];
 
+}
+
+- (void)clearNews {
+    [self.news removeAllObjects];
+    [self.delegate notifyNewsReady];
 }
 
 - (int)numberOfItems {

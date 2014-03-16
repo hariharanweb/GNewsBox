@@ -15,6 +15,7 @@
 
 
 - (void)fetchNews;
+- (void) clearNews;
 - (int) numberOfItems;
 - (HTNews*) newsAtIndex:(int) index;
 @end

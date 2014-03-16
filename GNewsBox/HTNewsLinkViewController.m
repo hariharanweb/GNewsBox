@@ -36,11 +36,18 @@
     [super didReceiveMemoryWarning];
 }
 
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+  [self.navigationItem setTitle:@"Loading...."];
+    return YES;
+}
+
 - (void)webViewDidStartLoad:(UIWebView *)webView {
+    [self.navigationItem setTitle:@"Loading...."];
 
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.navigationItem setTitle:@"Your content"];
 }
 
 

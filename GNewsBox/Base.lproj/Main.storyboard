@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-1647" y="-1221"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - My Daily News-->
         <scene sceneID="aZE-58-Bis">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="nbS-b8-6Xa" customClass="HTViewController" sceneMemberID="viewController">
@@ -69,8 +69,8 @@
                                         <segment title="News"/>
                                         <segment title="Engadget"/>
                                         <segment title="Tamil"/>
-                                        <segment title=""/>
-                                        <segment title=""/>
+                                        <segment title="Tech News"/>
+                                        <segment title="World"/>
                                     </segments>
                                     <connections>
                                         <action selector="headerClicked:" destination="hjk-Mk-EUG" eventType="valueChanged" id="p1w-7V-Ud0"/>
@@ -86,7 +86,7 @@
                             <outlet property="delegate" destination="nbS-b8-6Xa" id="f0C-Kv-wb8"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="OKQ-MI-j4K"/>
+                    <navigationItem key="navigationItem" title="My Daily News" id="OKQ-MI-j4K"/>
                     <connections>
                         <outlet property="collectionView" destination="RAW-Bu-YPm" id="Umt-DB-8zI"/>
                     </connections>
@@ -99,7 +99,7 @@
         <scene sceneID="3Cf-Jz-DYl">
             <objects>
                 <viewController id="Knn-id-E49" customClass="HTNewsLinkViewController" sceneMemberID="viewController">
-                    <webView key="view" contentMode="scaleToFill" id="yFC-Bx-emy">
+                    <webView key="view" contentMode="scaleToFill" scalesPageToFit="YES" id="yFC-Bx-emy">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
