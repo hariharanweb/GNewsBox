@@ -22,8 +22,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.newsFetcher = [[HTNewsFetcher alloc] initWithListener:self];
-    [self.newsFetcher fetchNews:@"https://news.google.com/news/feeds?pz=1&cf=all&ned=in&hl=en&output=rss"];
+    self.newsFetcher = [HTNewsFetcher instance];
+    [self.newsFetcher addDelegate:self];
+    [self.newsFetcher fetchNews];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,9 +8,13 @@
 #import "HTNews.h"
 
 @interface HTNewsFetcher : NSObject
-- (id)initWithListener:(id<HTNewsReadyProtocol>) delegate;
+@property(nonatomic, copy) NSString *newsURL;
 
-- (void)fetchNews:(NSString *)url;
++ (HTNewsFetcher *) instance;
+- (void) addDelegate:(id<HTNewsReadyProtocol>) delegate;
+
+
+- (void)fetchNews;
 - (int) numberOfItems;
 - (HTNews*) newsAtIndex:(int) index;
 @end

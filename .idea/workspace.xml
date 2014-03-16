@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HTViewController.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HTViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GNewsBox/HTViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="36" selection-start="415" selection-end="415" vertical-scroll-proportion="0.2690583" vertical-offset="0" max-vertical-offset="1050">
+            <state line="26" column="24" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="1065">
               <folding />
             </state>
           </provider>
@@ -41,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTNewsFetcher.m" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HTNewsFetcher.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GNewsBox/model/HTNewsFetcher.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="13" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="900">
+            <state line="44" column="91" selection-start="972" selection-end="972" vertical-scroll-proportion="0.4633431" vertical-offset="344" max-vertical-offset="1080">
               <folding>
                 <element signature="e#93#118#0" expanded="true" />
               </folding>
@@ -55,10 +55,8 @@
       <file leaf-file-name="HTNewsFetcher.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GNewsBox/model/HTNewsFetcher.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="8" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-              <folding>
-                <element signature="e#93#126#0" expanded="true" />
-              </folding>
+            <state line="16" column="17" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,10 +79,11 @@
         <option value="$PROJECT_DIR$/GNewsBox/model/HTNews.m" />
         <option value="$PROJECT_DIR$/GNewsBox/model/HTNews.h" />
         <option value="$PROJECT_DIR$/GNewsBox/model/HTGoogleNews.m" />
-        <option value="$PROJECT_DIR$/GNewsBox/model/HTNewsFetcher.m" />
         <option value="$PROJECT_DIR$/GNewsBox/HTNewsLinkViewController.h" />
         <option value="$PROJECT_DIR$/GNewsBox/HTNewsLinkViewController.m" />
+        <option value="$PROJECT_DIR$/GNewsBox/model/HTNewsFetcher.h" />
         <option value="$PROJECT_DIR$/GNewsBox/HTViewController.m" />
+        <option value="$PROJECT_DIR$/GNewsBox/model/HTNewsFetcher.m" />
       </list>
     </option>
   </component>
@@ -327,31 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GNewsBox/model/HTNews.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GNewsBox/model/HTNewsFetcher.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="900">
-          <folding>
-            <element signature="e#93#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GNewsBox/model/HTNewsFetcher.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding>
-            <element signature="e#93#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UICollectionViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="118" selection-start="401" selection-end="401" vertical-scroll-proportion="0.2639296" vertical-offset="0" max-vertical-offset="682">
@@ -396,10 +370,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GNewsBox/model/HTNews.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="11" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GNewsBox/model/HTNewsFetcher.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="17" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GNewsBox/HTViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="36" selection-start="415" selection-end="415" vertical-scroll-proportion="0.2690583" vertical-offset="0" max-vertical-offset="1050">
+        <state line="26" column="24" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="1065">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GNewsBox/model/HTNewsFetcher.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="91" selection-start="972" selection-end="972" vertical-scroll-proportion="0.4633431" vertical-offset="344" max-vertical-offset="1080">
+          <folding>
+            <element signature="e#93#118#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

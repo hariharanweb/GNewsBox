@@ -16,20 +16,32 @@
 
 
 @implementation HTNewsFetcher
+HTNewsFetcher *fetcher;
 
-- (id)initWithListener:(id<HTNewsReadyProtocol>) delegate {
++ (HTNewsFetcher *)instance {
+    if(fetcher)
+        return fetcher;
+
+    HTNewsFetcher *fetcher = [[HTNewsFetcher alloc] init];
+    return fetcher;
+}
+
+- (void)addDelegate:(id <HTNewsReadyProtocol>)delegate {
+    self.delegate = delegate;
+}
+
+- (id)init {
     self = [super init];
     if (self) {
         self.news  = [[NSMutableArray alloc] init];
-        self.delegate = delegate;
+        self.newsURL = @"https://news.google.com/news/feeds?pz=1&cf=all&ned=in&hl=en&output=rss";
     }
     return self;
 }
 
-- (void)fetchNews:(NSString *)url {
-    NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
 
-
+- (void)fetchNews {
+    NSURLRequest *req = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:self.newsURL]];
     [RSSParser parseRSSFeedForRequest:req success:^(NSArray *feedItems) {
         [feedItems each:^(id feedItem) {
            HTNews *newsItem = [[HTNews alloc] initWithFeed:feedItem];
@@ -37,7 +49,6 @@
         }];
         [self.delegate notifyNewsReady];
     } failure:^(NSError *error) {
-
         NSLog(@"%@ Errrr", error);
 
     }];
