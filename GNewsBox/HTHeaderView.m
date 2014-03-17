@@ -22,7 +22,8 @@
             @"http://www.engadget.com/rss.xml",
             @"http://www.indiaglitz.com/channels/tamil/rss/news-rss.xml",
             @"https://news.google.com/news/feeds?pz=1&cf=all&ned=in&hl=en&topic=tc&output=rss",
-            @"https://news.google.com/news/feeds?pz=1&cf=all&ned=in&hl=en&topic=w&output=rss"
+            @"https://news.google.com/news/feeds?pz=1&cf=all&ned=in&hl=en&topic=w&output=rss",
+            @"http://www.thehindu.com/news/?service=rss"
     ];
 
     HTNewsFetcher *newsFetcher = [HTNewsFetcher instance];
